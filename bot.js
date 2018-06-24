@@ -1,16 +1,33 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-let timer;
-console.log("BOT ONLINE");
+const Discord = require("discord.js");
+const Client = new Discord.Client();
 
-client.on("guildMemberAdd", member => {
-    timer = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000
-let words = [السلام عليكم,https://discord.gg/6Vc9ju,رابط,هلا]
-  setTimeout(() =>{
-  member.createDM().then(function (channel) {
-  return channel.send(${words[Math.floor(Math.random() * words.length)]}) 
-}).catch(console.error)
-}, timer)
-})
 
-client.login('NDU3MjcxNDAzNjk2MzU3Mzc2.DgWqyQ.NBqS7J7j-YXTZRQQ66abRe_KhYQ');
+console.log("Welcome Again !");
+
+
+Client.on("guildMemberRemove", member => {
+  member.send(`***:small_blue_diamond: - السلام عليكم ورحمة الله وبركاته ..
+
+- دعوة متواضعة لسموك :gem:  !
+
+:fish_cake:  - [‏ https://discord.gg/fCXVdxH  ]***
+[${member}]**`);
+
+  });
+ 
+
+  Client.on('guildMemberAdd', member => {
+  member.send(`**:sparkles:  :sparkles:
+
+أهلآ وٰ سهلآ فيك يسعدنآ تواجدك وٰ نتمنى لك أجمل ‏الأوقات في السيرڤر‏ ✯♔
+-
+سيزداد سيرفرنا بالجّمال عند أنضمامك لقروبنـا حيـاك :heart:️. 
+‏
+
+            [ https://discord.gg/fCXVdxH ]
+[${member}]**`);
+
+});
+
+
+Client.login("NDU3MjcxNDAzNjk2MzU3Mzc2.DgWqyQ.NBqS7J7j-YXTZRQQ66abRe_KhYQ");
