@@ -1,33 +1,59 @@
 const Discord = require("discord.js");
-const Client = new Discord.Client();
-
-
-console.log("Welcome Again !");
-
-
-Client.on("guildMemberRemove", member => {
-  member.send(`***:small_blue_diamond: - السلام عليكم ورحمة الله وبركاته ..
-
-- دعوة متواضعة لسموك :gem:  !
-
-:fish_cake:  - [‏ https://discord.gg/fCXVdxH  ]***
-[${member}]**`);
-
-  });
- 
-
-  Client.on('guildMemberAdd', member => {
-  member.send(`**:sparkles:  :sparkles:
-
-أهلآ وٰ سهلآ فيك يسعدنآ تواجدك وٰ نتمنى لك أجمل ‏الأوقات في السيرڤر‏ ✯♔
--
-سيزداد سيرفرنا بالجّمال عند أنضمامك لقروبنـا حيـاك :heart:️. 
-‏
-
-            [ https://discord.gg/fCXVdxH ]
-[${member}]**`);
-
+const client = new Discord.Client();
+client.on('ready', () => {
+  console.log('---------------');
+  console.log('By ༺Ŕą3đ:crown:ᎡᎶᎷ༻ Enjoy')
+  console.log('---------------')
 });
 
 
-Client.login("");
+client.on('message', message => {
+    if (message.content.startsWith("رابط")) { 
+      message.author.send("https://discord.gg/FVUudm5تكفا");
+        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+        console.log(collector)
+        collector.on('collect', message => {
+            if (message.content == "رابط") {
+      message.channel.send("https://discord.gg/FVUudm5تكفا");
+            } else if (message.content == "رابط") {
+            message.channel.send("https://discord.gg/FVUudm5تكفا");
+            }
+        })
+
+     }
+  });
+
+client.on('message', message => {
+    if (message.content.startsWith("سلام عليكم")) { 
+      message.author.send("https://discord.gg/FVUudm5تكفا");
+        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+        console.log(collector)
+        collector.on('collect', message => {
+            if (message.content == "سلام عليكم") {
+           message.channel.send("https://discord.gg/FVUudm5تكفا");
+            }
+        })
+
+     }
+  });
+
+
+   client.on('message', message => {
+    if (message.content.startsWith(".")) { 
+      message.author.send("https://discord.gg/FVUudm5تكفا");
+        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+        console.log(collector)
+        collector.on('collect', message => {
+            if (message.content == ".") {
+            message.channel.send("https://discord.gg/FVUudm5تكفا");
+            } else if (message.content == ".") {
+            message.channel.send("https://discord.gg/FVUudm5تكفا");
+            }
+        })
+
+     }
+  });
+
+
+
+client.login("NDU3MjcxNDAzNjk2MzU3Mzc2.DgWqyQ.NBqS7J7j-YXTZRQQ66abRe_KhYQ")
